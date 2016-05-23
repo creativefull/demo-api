@@ -1,0 +1,29 @@
+{
+  "name": "demo-api",
+  "version": "1.0.0",
+  "description": "demo tutorial membuat api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/creativefull/demo-api.git"
+  },
+  "keywords": [
+    "API",
+    "Nodejs"
+  ],
+  "author": "Shodiqul Muzaki <mshodiqul@gmail.com> (http://creativefull.cf)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/creativefull/demo-api/issues"
+  },
+  "homepage": "https://github.com/creativefull/demo-api#readme",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "moment": "^2.13.0",
+    "mongodb": "^2.1.19"
+  }
+}
