@@ -51,7 +51,7 @@ function API(db) {
 					if (expired < waktuSekarang) {
 						return res.json({status : 401, data : null, msg : "Token Has been experied"})
 					}
-					req.id_user = {user : hasil._id};
+					req.id_user = hasil.username;
 					return next();
 					// return res.json({status : 200, data : {user : hasil._id}, msg : "Enjoy your token"});
 				}
@@ -68,6 +68,13 @@ function API(db) {
 	this.item = function(req,res,next) {
 		var ModelItem = db.collection('item');
 		ModelItem.find().toArray(function(err, hasil) {
+			res.json(hasil);
+		})
+	}
+
+	this.getInfo = function(req,res,next) {
+		var ModelUser = db.collection('users');
+		ModelUser.findOne({username : req.id_user}, function(err, hasil) {
 			res.json(hasil);
 		})
 	}

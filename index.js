@@ -16,6 +16,7 @@ mongodb.connect('mongodb://localhost:27017/cermai', function(err, db) {
 	app.post("/api/auth", API.auth);
 
 	app.get("/api/item", API.isAuth, API.item);
+	app.get("/api/userInfo", API.isAuth, API.getInfo);
 
 	app.listen(2016, function() {
 		console.log("Application Listen on port ", 2016)
